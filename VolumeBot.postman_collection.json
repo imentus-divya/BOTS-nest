@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "3a60e08b-fa77-4df3-9766-3e9508b6a94f",
+		"name": "VolumeBot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30393395"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/exchangePair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exchangePair",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exchangePair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/orderBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/orderBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"orderBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQGFiYy5jb20iLCJpYXQiOjE3MTI1NjA5MjcsImV4cCI6MTcxMzE2NTcyN30.FDyTckLh5HcB0i45e00M5TL3pmApDfeIRYbeXKdR-Nk\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/startBot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQGFiYy5jb20iLCJpYXQiOjE3MTI1NjgzNTAsImV4cCI6MTcxMjU2ODM4MH0.sujL_pMI9jWJ3iXWjZlpCIGdVkfUDDfnhurXZDoH1PY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"api_key\": \"mx0vglqfPrIHD1zZjF\",\n    \"api_secret\": \"b3cae7e99a9b4c33be25e568ed5f0b15\",\n    \"pair\": \"DGHUSDT\",\n    \"interval\": 35,\n    \"offset_range\": [-0.000004, 0.000003],\n    \"token_range\": [1500, 2000],\n    \"bot_id\": \"0099\",\n    \"email\":\"vaibhav.dange@imentus.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/startBot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"startBot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5005/stopBot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQGFiYy5jb20iLCJpYXQiOjE3MTI1NjQyMjIsImV4cCI6MTcxMjU2NDI0Mn0.mHJjgZYIlGvLRK_ne7rQHSe0KjckNNb6fjl3v8xVXpU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"bot_unique_id\": \"184\",\n        \"bot_id\": \"0099\",\n        \"email\":\"vaibhav.dange@imentus.com\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/stopBot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"stopBot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"user@abc.com\",\n\"password\":123}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
